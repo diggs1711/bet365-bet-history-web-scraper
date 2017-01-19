@@ -11,7 +11,7 @@ class MainPageLocators(object):
     PASSWORD_INPUT = (
         By.XPATH, "//div[contains(@class, 'hm-Login_PasswordWrapper')]/input")
     LOGIN_BUTTON = (By.CLASS_NAME, "hm-Login_LoginBtn")
-    PASSWORD_INPUT_REVEAL = "document.getElementsByClassName('hm-Login_InputField')[2].value = '3miix0pcjUN6AbCxlLza';"
+    PASSWORD_INPUT_REVEAL = "document.getElementsByClassName('hm-Login_InputField')[2].value = '';"
     MEMBERS_LINK = (By.CLASS_NAME, "hm-MembersInfo_UserLink")
 
 
