@@ -14,7 +14,6 @@ class LandingPage(Page):
 
 
 class MainPage(Page):
-
     def enter_username(self, name):
         self.clear_username()
         self.driver.find_element(
