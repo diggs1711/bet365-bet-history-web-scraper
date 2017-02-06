@@ -14,7 +14,6 @@ class LandingPage(Page):
 
 
 class MainPage(Page):
-
     def enter_username(self, name):
         Page.wait_for_element(self, *MainPageLocators.USERNAME_INPUT)
 
