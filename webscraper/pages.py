@@ -1,8 +1,6 @@
 from base import Page
 from locators import *
 from time import sleep
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.support.ui import Select
 from datetime import date
 from dateutil.relativedelta import relativedelta
 from selenium.webdriver.common.keys import Keys
@@ -63,8 +61,9 @@ class PopupWindow(Page):
 
     def get_bet_history(self):
         Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
-        self.show_more()
-        Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
+        self.click_show_more_until_no_more()
+
+        sleep(1)
 
         Page.wait_for_element(self, *PopUpWindowLocators.BET_CONFIRMATION)
         bets = self.driver.find_elements(
@@ -80,6 +79,22 @@ class PopupWindow(Page):
         self.click_search_button()
 '''
 
+    def click_show_more_until_no_more(self):
+        while(self.is_show_more_present()):
+            try:
+                print(self.is_show_more_present())
+                Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
+                self.show_more()
+            except Exception as e:
+                print(e)
+                break
+            finally:
+                pass
+
+    def is_show_more_present(self):
+        return self.driver.find_element(*PopUpWindowLocators
+                                        .SHOW_MORE_BTN).is_displayed()
+
     def get_bet_details(self, bets):
         self.bets = []
 
@@ -88,25 +103,23 @@ class PopupWindow(Page):
         bet_confirmation = self.driver.find_elements(
             *PopUpWindowLocators.BET_CONFIRMATION)
 
+        Page.wait_for_element(self, *PopUpWindowLocators.BET_RETURN)
+
+        stakes = self.driver.find_elements(*PopUpWindowLocators.BET_STAKE)
+        returns = self.driver.find_elements(
+            *PopUpWindowLocators.BET_RETURN)
+
         for index, bet in enumerate(bets):
             self.bet_obj = {}
-
-            Page.wait_for_element(self, *PopUpWindowLocators.BET_RETURN)
-            stakes = self.driver.find_elements(*PopUpWindowLocators.BET_STAKE)
-            returns = self.driver.find_elements(
-                *PopUpWindowLocators.BET_RETURN)
-
-            Page.wait_for_element_invisible(
-                self, *PopUpWindowLocators.BET_RESULT)
-
-            Page.wait_for_element(self, *PopUpWindowLocators.BET_STAKE)
 
             self.bet_obj['bet_stake'] = stakes[index].text
             self.bet_obj['bet_return'] = returns[index].text
 
             bet.click()
 
-            Page.wait_for_element(self, *PopUpWindowLocators.BET_RESULT)
+            Page.wait_for_element(self, *PopUpWindowLocators.BET_CONFIRMATION)
+            Page.wait_for_element(self, *PopUpWindowLocators.BET_TYPE)
+            sleep(1)
 
             self.bet_obj['bet_type'] = bet_confirmation[index].find_element(
                 *PopUpWindowLocators.BET_TYPE).text
@@ -127,6 +140,9 @@ class PopupWindow(Page):
                 *PopUpWindowLocators.BET_ID).text
 
             self.bets.append(self.bet_obj)
+
+            print("***********")
+            print(self.bets)
 
             bet.click()
 
