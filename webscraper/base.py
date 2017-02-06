@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class Page(object):
@@ -13,6 +14,12 @@ class Page(object):
     def find_elements(self, *locator):
         return self.driver.find_elements(*locator)
 
+    def staleness_of(self, *locator):
+        return EC.staleness_of(locator[1])
+
+    def presence_of(self, *locator):
+        return EC.presence_of_element_located(*locator)
+
     def get_title(self):
         return self.driver.title
 
@@ -23,4 +30,21 @@ class Page(object):
         return True if (self.find_element(*locator).is_selected()) else False
 
     def wait_for_element(self, *locator):
-        return WebDriverWait(self.driver, 30).until(lambda self: self.find_element(*locator))
+        return WebDriverWait(self.driver, 30).until(
+            lambda self: self.find_element(*locator))
+
+    def wait_for_element_clickable(self, *locator):
+        return WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable(*locator))
+
+    def wait_for_element_invisible(self, *locator):
+        return WebDriverWait(self.driver, 30).until(
+            EC.invisibility_of_element_located((locator)))
+
+    def wait_for_staleness(self, *locator):
+        return WebDriverWait(self.driver, 30).until(
+            self.staleness_of(*locator))
+
+    def presence_of_element_located(self, *locator):
+        return WebDriverWait(self.driver, 30).until(
+            self.presence_of(*locator))
