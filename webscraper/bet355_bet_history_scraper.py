@@ -20,10 +20,14 @@ def main():
 
     popup_window = PopupWindow(driver)
 
-    bets = popup_window.get_bet_history()
+    bets_last_two_days = popup_window.get_bet_history()
+
+    bets_last_six_months = popup_window.get_bets_from_last_six_months()
+
+    all_bets_from_last_six_months = bets_last_two_days + bets_last_six_months
 
     with io.open('bets.json', 'w', encoding="utf-8") as f:
-        f.write(unicode(json.dumps(bets, ensure_ascii=False)))
+        f.write(unicode(json.dumps(all_bets_from_last_six_months, ensure_ascii=False)))
 
     with io.open('bets.json', encoding="utf-8") as f:
         data = json.load(f)

@@ -48,16 +48,25 @@ class MainPage(Page):
 
 class PopupWindow(Page):
 
-    def create_date_string(self):
-        six_months_ago = self.get_date_six_months_ago()
-        return str(six_months_ago.day) + "/" + str(six_months_ago.month) + "/" + str(six_months_ago.year)
+    def create_date_string(self, mon, day):
+        date_string = self.get_date(mon, day)
+        return self.format_date_string(date_string)
 
-    def get_date_six_months_ago(self):
-        return date.today() + relativedelta(months=-6)
+    def format_date_string(self, date_str):
+        d = date_str.day
+        m = date_str.month
+        y = date_str.year
 
-    def enter_from_date(self, date_string):
-        self.driver.find_element(
-            *PopUpWindowLocators.DATE_FROM_INPUT).send_keys(date_string)
+        d = self.prefix_zeroes(d)
+        m = self.prefix_zeroes(m)
+
+        return str(d) + "/" + str(m) + "/" + str(y)
+
+    def prefix_zeroes(self, num):
+        return num if num > 10 else "0" + str(num)
+
+    def get_date(self, month, day):
+        return date.today() + relativedelta(months=-month, days=-day)
 
     def get_bet_history(self):
         Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
@@ -71,18 +80,9 @@ class PopupWindow(Page):
 
         return self.get_bet_details(bets)
 
-        '''
-        self.switch_driver_to_popup()
-        self.select_from_dropdown("Settled Sports Bets")
-        self.select_from_radio_button()
-        self.enter_from_date(self.create_date_string())
-        self.click_search_button()
-'''
-
     def click_show_more_until_no_more(self):
         while(self.is_show_more_present()):
             try:
-                print(self.is_show_more_present())
                 Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
                 self.show_more()
             except Exception as e:
@@ -141,9 +141,6 @@ class PopupWindow(Page):
 
             self.bets.append(self.bet_obj)
 
-            print("***********")
-            print(self.bets)
-
             bet.click()
 
         return self.bets
@@ -166,3 +163,14 @@ class PopupWindow(Page):
 
     def show_more(self):
         self.driver.find_element(*PopUpWindowLocators.SHOW_MORE_BTN).click()
+
+    def get_bets_from_last_six_months(self):
+        date_six_months_ago = self.create_date_string(6, 0)
+        date_two_days_ago = self.create_date_string(0, 2)
+
+        url = "https://members.bet365.com/MEMBERS/History/SportsHistory/HistorySearch/?BetStatus=0&SearchScope=3&datefrom=" + \
+            date_six_months_ago + "%2000:00:00&dateto=" + \
+            date_two_days_ago + "%2023:59:59&platform=Desktop"
+
+        self.driver.get(url)
+        return self.get_bet_history()
