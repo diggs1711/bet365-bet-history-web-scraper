@@ -14406,3 +14406,125 @@ Full stack:
 1486510789140	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
 1486510906893	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
 1486510906898	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033422509	geckodriver	INFO	Listening on 127.0.0.1:52440
+1487033423421	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.8xp1mmSvWYGr
+1487033423423	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1487033423497	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41532
+1487033427718	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033427723	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033427779	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033427782	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033429242	Marionette	INFO	Listening on port 41532
+1487033429686	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033429688	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033429702	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033429704	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+Vector smash protection is enabled.
+JavaScript error: , line 0: Error: Permission denied to access property "href"
+Failed to open VDPAU backend libvdpau_va_gl.so: cannot open shared object file: No such file or directory
+JavaScript error: https://members.bet365.com/Members/javascript/Release/swfobject_v0.js, line 1: Error: Permission denied to access property "href"
+JavaScript error: https://www.bet365.com/home/js/globals_vA058cr.js, line 2: TypeError: $0i is undefined
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+JavaScript warning: https://www.bet365.com/betslip/javascript/min/3.0.8.0/betslip.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://members.bet365.com/Members/History/Scripts/js/jquery-1.10.2.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+
+(firefox:5903): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:5903): GLib-GObject-WARNING **: /build/glib2.0-8EA4QF/glib2.0-2.48.1/./gobject/gsignal.c:3486: signal name 'selection_changed' is invalid for instance '0x93954a60' of type 'MaiAtkType139'
+JavaScript warning: https://members.bet365.com/Members/History/Scripts/js/jquery-1.10.2.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1487033898597	geckodriver	INFO	Listening on 127.0.0.1:33140
+1487033899582	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4YBzaNRbYM2P
+1487033899585	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1487033899595	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46601
+1487033901171	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033901174	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033901227	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033901230	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033902311	Marionette	INFO	Listening on port 46601
+1487033902675	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033902678	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487033902696	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487033902697	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+Vector smash protection is enabled.
+JavaScript error: , line 0: Error: Permission denied to access property "href"
+Failed to open VDPAU backend libvdpau_va_gl.so: cannot open shared object file: No such file or directory
+JavaScript error: https://members.bet365.com/Members/javascript/Release/swfobject_v0.js, line 1: Error: Permission denied to access property "href"
+JavaScript error: https://www.bet365.com/home/js/globals_vA058cr.js, line 2: TypeError: $0i is undefined
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+JavaScript warning: https://www.bet365.com/betslip/javascript/min/3.0.8.0/betslip.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.bet365.com/betslip/javascript/min/3.0.8.0/betslip.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://members.bet365.com/Members/History/Scripts/js/jquery-1.10.2.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+
+(firefox:6125): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6125): GLib-GObject-WARNING **: /build/glib2.0-8EA4QF/glib2.0-2.48.1/./gobject/gsignal.c:3486: signal name 'selection_changed' is invalid for instance '0x9ef33f10' of type 'MaiAtkType139'
+1487034014449	geckodriver	INFO	Listening on 127.0.0.1:34707
+1487034015440	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.aq9BkriPLzQV
+1487034015444	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1487034015451	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33546
+1487034016943	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034016946	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034016989	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487034016991	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487034017956	Marionette	INFO	Listening on port 33546
+1487034018305	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034018309	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487034018323	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034018324	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+Vector smash protection is enabled.
+JavaScript error: , line 0: Error: Permission denied to access property "href"
+Failed to open VDPAU backend libvdpau_va_gl.so: cannot open shared object file: No such file or directory
+JavaScript error: https://members.bet365.com/Members/javascript/Release/swfobject_v0.js, line 1: Error: Permission denied to access property "href"
+JavaScript error: https://www.bet365.com/home/js/globals_vA058cr.js, line 2: TypeError: $0i is undefined
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+JavaScript warning: https://www.bet365.com/betslip/javascript/min/3.0.8.0/betslip.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.bet365.com/betslip/javascript/min/3.0.8.0/betslip.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://members.bet365.com/Members/History/Scripts/js/jquery-1.10.2.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+
+(firefox:6323): GLib-GObject-CRITICAL **: g_type_add_interface_static: assertion 'g_type_parent (interface_type) == G_TYPE_INTERFACE' failed
+
+(firefox:6323): GLib-GObject-WARNING **: /build/glib2.0-8EA4QF/glib2.0-2.48.1/./gobject/gsignal.c:3486: signal name 'selection_changed' is invalid for instance '0x98adc100' of type 'MaiAtkType139'
+JavaScript warning: https://members.bet365.com/Members/History/Scripts/js/jquery-1.10.2.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1487034619818	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034619822	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
+1487034737808	addons.xpi	WARN	Add-on langpack-en-GB@firefox.mozilla.org is not compatible with application version.
+1487034737813	addons.xpi	WARN	Add-on langpack-en-ZA@firefox.mozilla.org is not compatible with application version.
