@@ -3,7 +3,6 @@ from pages import *
 import json
 import io
 
-
 def main():
     bets = []
 
