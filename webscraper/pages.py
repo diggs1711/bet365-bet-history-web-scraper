@@ -72,7 +72,7 @@ class PopupWindow(Page):
         Page.wait_for_element(self, *PopUpWindowLocators.SHOW_MORE_BTN)
         self.click_show_more_until_no_more()
 
-        sleep(1)
+        sleep(2)
 
         Page.wait_for_element(self, *PopUpWindowLocators.BET_CONFIRMATION)
         bets = self.driver.find_elements(
@@ -110,34 +110,41 @@ class PopupWindow(Page):
             *PopUpWindowLocators.BET_RETURN)
 
         for index, bet in enumerate(bets):
-            self.bet_obj = {}
 
-            self.bet_obj['bet_stake'] = stakes[index].text
-            self.bet_obj['bet_return'] = returns[index].text
+            try:
+                self.bet_obj = {}
 
-            bet.click()
+                self.bet_obj['bet_stake'] = stakes[index].text
+                self.bet_obj['bet_return'] = returns[index].text
 
-            Page.wait_for_element(self, *PopUpWindowLocators.BET_CONFIRMATION)
-            Page.wait_for_element(self, *PopUpWindowLocators.BET_TYPE)
-            sleep(1)
+                bet.click()
 
-            self.bet_obj['bet_type'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_TYPE).text
+                Page.wait_for_element(
+                    self, *PopUpWindowLocators.BET_CONFIRMATION)
+                Page.wait_for_element(self, *PopUpWindowLocators.BET_TYPE)
+                sleep(1)
 
-            self.bet_obj['bet_event'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_EVENT).text
+                self.bet_obj['bet_type'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_TYPE).text
 
-            self.bet_obj['bet_date'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_DATE).text
+                self.bet_obj['bet_event'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_EVENT).text
 
-            self.bet_obj['bet_odds'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_ODDS).text
+                self.bet_obj['bet_date'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_DATE).text
 
-            self.bet_obj['bet_result'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_RESULT).text
+                self.bet_obj['bet_odds'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_ODDS).text
 
-            self.bet_obj['bet_id'] = bet_confirmation[index].find_element(
-                *PopUpWindowLocators.BET_ID).text
+                self.bet_obj['bet_result'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_RESULT).text
+
+                self.bet_obj['bet_id'] = bet_confirmation[index].find_element(
+                    *PopUpWindowLocators.BET_ID).text
+            except Exception as e:
+                pass
+            finally:
+                pass
 
             self.bets.append(self.bet_obj)
 
