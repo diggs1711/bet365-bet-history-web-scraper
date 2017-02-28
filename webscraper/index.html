@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bet Tracker</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar fixed-top navbar-inverse bg-inverse">
+            <a class="navbar-brand" href="#">Bet Analyser</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="container file-upload">
+            <input type="file" class="file" value="Import" />
+            <button type="button" class="btn btn-success"><a href="#" id="fileSelect">Select File</a></button>
+        </div>
+        <div class="content container hidden">
+            <div class="bets-list col-md-8 table-responsive">
+                <table class="table table-striped table-fixed bets">
+                    <thead>
+                        <tr class="bet">
+                            <th class="bet-date col">Date</th>
+                            <th class="bet-event col">Event</th>
+                            <th class="bet-type col">Market</th>
+                            <th class="bet-stake col">Stake</th>
+                            <th class="bet-return col">Return</th>
+                            <th class="bet-result col">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bet-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="column results col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body js-stats">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</body>
+
+</html>
