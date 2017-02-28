@@ -7,7 +7,7 @@ dist/
 __pycache__/
 *.so
 *~
-.json
+*.json
 
 # due to using tox and pytest
 .tox
