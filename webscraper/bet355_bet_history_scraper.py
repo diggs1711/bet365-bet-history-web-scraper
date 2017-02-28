@@ -5,7 +5,7 @@ import io
 
 
 def main():
-    driver = webdriver.Firefox(executable_path='./geckodriver')
+    driver = webdriver.Firefox()
     driver.get("https://www.bet365.com/?lng=1&cb=10326429708#/HO/")
 
     landing_page = LandingPage(driver)
