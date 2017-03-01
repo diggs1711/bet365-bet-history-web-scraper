@@ -1,10 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from pages import *
 import json
 import io
 
 def main():
-    driver = webdriver.Firefox()
+    binary = FirefoxBinary()
+    driver = webdriver.Firefox(firefox_binary=binary)
+
     driver.get("https://www.bet365.com/?lng=1&cb=10326429708#/HO/")
 
     landing_page = LandingPage(driver)
