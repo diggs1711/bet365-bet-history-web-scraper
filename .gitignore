@@ -14,3 +14,10 @@ __pycache__/
 
 *.json
 *.log
+
+# gradle stuff to ignore
+#Gradle
+.gradletasknamecache
+.gradle/
+build/
+bin/
